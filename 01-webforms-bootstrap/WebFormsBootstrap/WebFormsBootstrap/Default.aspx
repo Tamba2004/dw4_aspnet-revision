@@ -1,6 +1,10 @@
 ﻿<%@ Page Title="Acceuil" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebFormsBootstrap.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"> 
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">     <h2>Accueil</h2>
-    <p>Si tu vois cette phrase sous le titre « Mon Répertoire », la Master Page fonctionne.</p>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">    <h2>Accueil</h2>
+    <button type="button" class="btn btn-primary">Bouton Bootstrap</button>
+    <div class="alert alert-success alert-dismissible mt-3" role="alert">
+        Bootstrap fonctionne !
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fermer"></button>
+    </div>
 </asp:Content>

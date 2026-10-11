@@ -1,27 +1,33 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebFormsBootstrap.Site" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="WebFormsBootstrap.Site" %>
 
 <!DOCTYPE html>
-yh9o^j
 <html lang="fr">
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Mon Répertoire</title>
+
+    <link href="~/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <header>
-            <h1>Mon Répertoire</h1>9
-        </header>
-        <main>
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-        </main>
-        <footer>
-            <p>&copy; <%: DateTime.Now.Year %> - Mon Répertoire</p>
-        </footer>
+        <div class="container">
+            <header>
+                <h1>Mon Répertoire</h1>
+            </header>
+            <main>
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </main>
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - Mon Répertoire</p>
+            </footer>
+        </div>
     </form>
+
+    <script src="<%= ResolveUrl("~/Bootstrap/js/bootstrap.bundle.min.js") %>"></script>
 </body>
 </html>

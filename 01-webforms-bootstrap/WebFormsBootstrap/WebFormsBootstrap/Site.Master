@@ -8,6 +8,9 @@
     <title><%: Page.Title %> - Mon Répertoire</title>
 
     <link href="~/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Datatables/css/datatables.min.css" rel="stylesheet" />
+<link href="~/FontAwesome/css/all.css" rel="stylesheet" />
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -28,6 +31,10 @@
         </div>
     </form>
 
-    <script src="<%= ResolveUrl("~/Bootstrap/js/bootstrap.bundle.min.js") %>"></script>
+       <script src="<%= ResolveUrl("~/Bootstrap/js/bootstrap.bundle.min.js") %>"></script>
+    <script src="<%= ResolveUrl("~/Datatables/js/datatables.min.js") %>"></script>
+    <asp:ContentPlaceHolder ID="ScriptsContent" runat="server">
+    </asp:ContentPlaceHolder>
+
 </body>
 </html>

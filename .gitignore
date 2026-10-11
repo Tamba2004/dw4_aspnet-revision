@@ -1,0 +1,31 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.csproj.user
+_ReSharper*/
+
+# Build
+bin/
+obj/
+TestResults/
+
+# NuGet (se restaure avec Visual Studio)
+packages/
+
+# Node (si tu installes Bootstrap avec npm)
+node_modules/
+
+# Bases de données locales (garde les scripts .sql, pas les fichiers .mdf)
+*.mdf
+*.ldf
+
+# Secrets : ne jamais publier mots de passe ni chaînes de connexion réelles
+Web.secrets.config
+appsettings.Development.json
+*.pubxml.user
+
+# Divers
+*.log
+Thumbs.db
+.DS_Store

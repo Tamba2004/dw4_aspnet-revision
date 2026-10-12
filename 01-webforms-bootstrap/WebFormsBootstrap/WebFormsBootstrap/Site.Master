@@ -1,40 +1,61 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="WebFormsBootstrap.Site" %>
-
 <!DOCTYPE html>
+
 <html lang="fr">
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Mon Répertoire</title>
-
     <link href="~/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-<link href="~/Datatables/css/datatables.min.css" rel="stylesheet" />
-<link href="~/FontAwesome/css/all.css" rel="stylesheet" />
-
+    <link href="~/Datatables/css/datatables.min.css" rel="stylesheet" />
+    <link href="~/FontAwesome/css/all.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="container">
-            <header>
-                <h1>Mon Répertoire</h1>
-            </header>
+
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" runat="server" href="~/Default.aspx">
+                    <i class="fa-solid fa-address-book me-2"></i>Mon Répertoire
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+                        aria-expanded="false" aria-label="Afficher ou masquer le menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" runat="server" href="~/Default.aspx"><i class="fa-solid fa-house me-1"></i>Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" runat="server" href="~/Contacts.aspx"><i class="fa-solid fa-users me-1"></i>Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" runat="server" href="~/About.aspx"><i class="fa-solid fa-circle-info me-1"></i>À propos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container py-4">
             <main>
                 <asp:ContentPlaceHolder ID="MainContent" runat="server">
                 </asp:ContentPlaceHolder>
             </main>
-            <footer>
+            <footer class="pt-3 mt-4 border-top text-body-secondary">
                 <p>&copy; <%: DateTime.Now.Year %> - Mon Répertoire</p>
             </footer>
         </div>
+
     </form>
 
-       <script src="<%= ResolveUrl("~/Bootstrap/js/bootstrap.bundle.min.js") %>"></script>
+    <script src="<%= ResolveUrl("~/Bootstrap/js/bootstrap.bundle.min.js") %>"></script>
     <script src="<%= ResolveUrl("~/Datatables/js/datatables.min.js") %>"></script>
     <asp:ContentPlaceHolder ID="ScriptsContent" runat="server">
     </asp:ContentPlaceHolder>
-
 </body>
 </html>
